@@ -31,7 +31,7 @@ export default function Home() {
       <div className="bg-white/70 backdrop-blur-xl shadow-xl rounded-2xl p-8 w-full max-w-md">
         <h1 className="text-4xl font-bold text-center text-blue-700 mb-6">🌤 Weather Snapshot</h1>
 
-        <div className="flex gap-2 mb-6">
+        <div className="flex flex-col sm:flex-row gap-2 mb-6">
           <input
             type="text"
             placeholder="Search city e.g. London"
@@ -43,7 +43,8 @@ export default function Home() {
           <button
             onClick={fetchWeather}
             disabled={!city || loading}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg transition duration-150 disabled:opacity-50"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg transition duration-150 disabled:opacity-50
+            w-1/2 ml-16 sm:ml-0"
           >
             {loading ? "Loading..." : "Search"}
           </button>
